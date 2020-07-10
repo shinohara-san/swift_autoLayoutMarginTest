@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,67 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="autoMarginTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6y5-u3-XY8" userLabel="blueView">
+                                <rect key="frame" x="77.5" y="94" width="259" height="138"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6y5-u3-XY8" secondAttribute="height" multiplier="259:138" id="7IC-lS-aY9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A7z-dX-qSz">
+                                <rect key="frame" x="182" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="A7z-dX-qSz" secondAttribute="height" multiplier="1:1" id="sfK-le-o8X"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJ2-l1-Z63">
+                                <rect key="frame" x="87" y="679" width="240" height="128"/>
+                                <color key="backgroundColor" red="1" green="0.2527923882" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dJ2-l1-Z63" secondAttribute="height" multiplier="15:8" id="1Yd-bC-tu8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGz-da-QON">
+                                <rect key="frame" x="179.5" y="807" width="55" height="55"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fGz-da-QON" secondAttribute="height" multiplier="1:1" id="kYc-64-fk5"/>
+                                </constraints>
+                            </view>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="aRr-q8-xLT">
+                                <rect key="frame" x="0.0" y="232" width="414" height="447"/>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="A7z-dX-qSz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3mN-uJ-EJP"/>
+                            <constraint firstItem="6y5-u3-XY8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DpU-Mi-G9Y"/>
+                            <constraint firstItem="A7z-dX-qSz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Dpi-aB-IIy"/>
+                            <constraint firstItem="dJ2-l1-Z63" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FCo-Rx-xBR"/>
+                            <constraint firstItem="fGz-da-QON" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="JDB-Ou-aP0"/>
+                            <constraint firstItem="aRr-q8-xLT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="JLj-C5-UVs"/>
+                            <constraint firstItem="aRr-q8-xLT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KLg-ob-fvQ"/>
+                            <constraint firstItem="fGz-da-QON" firstAttribute="top" secondItem="dJ2-l1-Z63" secondAttribute="bottom" id="Lu8-7O-7Z0"/>
+                            <constraint firstItem="fGz-da-QON" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PJv-fL-QKe"/>
+                            <constraint firstItem="A7z-dX-qSz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.120773" id="RPU-oa-u2P"/>
+                            <constraint firstItem="aRr-q8-xLT" firstAttribute="top" secondItem="6y5-u3-XY8" secondAttribute="bottom" id="bLg-j2-qdt"/>
+                            <constraint firstItem="fGz-da-QON" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.13285" id="i0j-pR-RC7"/>
+                            <constraint firstItem="dJ2-l1-Z63" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.57971" id="qkM-HN-fRe"/>
+                            <constraint firstItem="6y5-u3-XY8" firstAttribute="top" secondItem="A7z-dX-qSz" secondAttribute="bottom" id="rbr-pp-qxl"/>
+                            <constraint firstItem="dJ2-l1-Z63" firstAttribute="top" secondItem="aRr-q8-xLT" secondAttribute="bottom" id="rub-jU-CRn"/>
+                            <constraint firstItem="6y5-u3-XY8" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.625604" id="wLK-32-UWi"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="113.83928571428571"/>
         </scene>
     </scenes>
 </document>
